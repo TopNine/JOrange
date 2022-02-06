@@ -1,16 +1,32 @@
 package com.life.jorange.viewmodel
 
-import androidx.lifecycle.ViewModel
-import com.life.jorange.base.ID_CONSTRAINT_LAYOUT
-import com.life.jorange.entity.MainInfo
+import com.life.jorange.base.*
+import com.life.jorange.entity.ListInfo
 
 /**
  * @author: zhangly
  * create time: 2022/1/26
  * Descrite:
  */
-fun getMainList(): MutableList<MainInfo> {
-    val items = mutableListOf<MainInfo>()
-    items.add(MainInfo(ID_CONSTRAINT_LAYOUT, "Constraint Layout"))
+fun getMainList(): MutableList<ListInfo> {
+    val items = mutableListOf<ListInfo>()
+    items.add(ListInfo(ID_CONSTRAINT_LAYOUT, "Constraint Layout"))
+    items.add(ListInfo(ID_CUSTOM_LIST, "Custom List"))
+    items.add(ListInfo(ID_KOTLIN, "Kotlin Layout"))
+    items.add(ListInfo(ID_ANIMATOR_LAYOUT, "Animate List"))
+    return items
+}
+
+fun getCustomList(): MutableList<ListInfo> {
+    val items = mutableListOf<ListInfo>()
+    items.add(ListInfo(ID_CUSTOM_DRAW, "Custom Draw"))
+    items.add(ListInfo(ID_XFERMODE, "Xfermode View"))
+    items.add(ListInfo(ID_TEXT_MEASURE, "Text Measure View"))
+    return items
+}
+
+fun getAnimatorList(): MutableList<ListInfo> {
+    val items = mutableListOf<ListInfo>()
+    items.add(ListInfo(ID_ANIMATOR_DETAIL, "Animate Detail"))
     return items
 }

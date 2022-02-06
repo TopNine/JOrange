@@ -22,7 +22,36 @@
 
         <activity
             android:name="com.life.jorange.activity.ConstraintLayoutActivity"
-            android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize" />
+            android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
+            android:theme="@style/Theme.JOrange.NoActionBar" />
+        <activity
+            android:name="com.life.jorange.anim.ViewAnimatorActivity"
+            android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
+            android:theme="@style/Theme.JOrange.NoActionBar" />
+        <activity
+            android:name="com.life.jorange.anim.AnimatorDetailActivity"
+            android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
+            android:theme="@style/Theme.JOrange.NoActionBar" />
+        <activity
+            android:name="com.life.jorange.kotlin.KotlinActivity"
+            android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
+            android:theme="@style/Theme.JOrange.NoActionBar" />
+        <activity
+            android:name="com.life.jorange.custom.CustomListActivity"
+            android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
+            android:theme="@style/Theme.JOrange.NoActionBar" />
+        <activity
+            android:name="com.life.jorange.custom.graph.GraphMeasureActivity"
+            android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
+            android:theme="@style/Theme.JOrange.NoActionBar" />
+        <activity
+            android:name="com.life.jorange.custom.xfermode.XfermodeActivity"
+            android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
+            android:theme="@style/Theme.JOrange.NoActionBar" />
+        <activity
+            android:name="com.life.jorange.custom.text.TextMeasureActivity"
+            android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
+            android:theme="@style/Theme.JOrange.NoActionBar" />
     </application>
 
 </manifest>

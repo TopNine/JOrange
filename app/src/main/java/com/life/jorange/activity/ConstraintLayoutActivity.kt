@@ -1,6 +1,5 @@
 package com.life.jorange.activity
 
-import android.app.Activity
 import android.os.Bundle
 
 /**
@@ -8,9 +7,9 @@ import android.os.Bundle
  * create time: 2022/1/26
  * Descrite:
  */
-class ConstraintLayoutActivity : Activity() {
+class ConstraintLayoutActivity : BaseListActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        title = this::class.simpleName ?: "BaseListActivity"
     }
 }
