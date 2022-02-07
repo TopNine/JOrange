@@ -24,7 +24,7 @@ class XfermodeView2(context: Context, attributeSet: AttributeSet) : View(context
     init {
         val canvas = Canvas(circleBitmap)
         paint.color = Color.RED
-        canvas.drawCircle(RADIO, RADIO, RADIO, paint)
+        canvas.drawOval(0f, 0f, SIZE, SIZE, paint)
         canvas.setBitmap(squareBitmap)
         paint.color = Color.BLUE
         canvas.drawRect(
