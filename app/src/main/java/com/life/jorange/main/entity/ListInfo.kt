@@ -1,4 +1,4 @@
-package com.life.jorange.entity
+package com.life.jorange.main.entity
 
 /**
  * @author: zhangly

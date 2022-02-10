@@ -15,3 +15,4 @@ const val ID_CUSTOM_LIST = 21
 const val ID_CUSTOM_DRAW = 22
 const val ID_XFERMODE = 23
 const val ID_TEXT_MEASURE = 24
+const val ID_CLIP_CAMERA = 25

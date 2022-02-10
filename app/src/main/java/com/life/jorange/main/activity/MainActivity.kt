@@ -1,29 +1,25 @@
-package com.life.jorange.activity
+package com.life.jorange.main.activity
 
 import android.os.Bundle
-import com.life.jorange.alg.offer.MinStack
+import com.life.jorange.alg.offer.ListNode
+import com.life.jorange.alg.offer.Solution
 import com.life.jorange.anim.ViewAnimatorActivity
 import com.life.jorange.base.ID_ANIMATOR_LAYOUT
 import com.life.jorange.base.ID_CONSTRAINT_LAYOUT
 import com.life.jorange.base.ID_CUSTOM_LIST
 import com.life.jorange.base.ID_KOTLIN
 import com.life.jorange.custom.CustomListActivity
-import com.life.jorange.entity.ListInfo
 import com.life.jorange.kotlin.KotlinActivity
+import com.life.jorange.main.entity.ListInfo
 import com.life.jorange.utils.launchActivity
 
 class MainActivity : BaseListActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val minStack = MinStack()
-        minStack.push(-2);
-        minStack.push(0);
-        minStack.push(-3);
-        minStack.min();   //--> 返回 -3.
-        minStack.pop();
-        minStack.top();    //  --> 返回 0.
-        minStack.min();  // --> 返回 -2.
 
+//        val solution = Solution()
+//        val head = ListNode(1, ListNode(3, ListNode(2, null)))
+//        solution.reversePrint(head)
     }
 
     override fun handleItemClick(listInfo: ListInfo) {

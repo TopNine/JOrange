@@ -1,18 +1,16 @@
-package com.life.jorange.activity
+package com.life.jorange.main.activity
 
-import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.life.jorange.R
-import com.life.jorange.adapter.BaseListAdapter
 import com.life.jorange.base.OnItemClickListener
 import com.life.jorange.databinding.ActivityBaseListBinding
-import com.life.jorange.entity.ListInfo
-import com.life.jorange.viewmodel.getMainList
+import com.life.jorange.main.adapter.BaseListAdapter
+import com.life.jorange.main.entity.ListInfo
+import com.life.jorange.main.viewmodel.getMainList
 
 open class BaseListActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBaseListBinding

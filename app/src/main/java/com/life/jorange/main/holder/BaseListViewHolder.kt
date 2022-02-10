@@ -1,11 +1,11 @@
-package com.life.jorange.holder
+package com.life.jorange.main.holder
 
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.life.jorange.R
 import com.life.jorange.base.OnItemClickListener
-import com.life.jorange.entity.ListInfo
+import com.life.jorange.main.entity.ListInfo
 
 /**
  * @author: zhangly

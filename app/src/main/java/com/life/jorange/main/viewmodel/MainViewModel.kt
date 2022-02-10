@@ -1,7 +1,7 @@
-package com.life.jorange.viewmodel
+package com.life.jorange.main.viewmodel
 
 import com.life.jorange.base.*
-import com.life.jorange.entity.ListInfo
+import com.life.jorange.main.entity.ListInfo
 
 /**
  * @author: zhangly
@@ -22,6 +22,7 @@ fun getCustomList(): MutableList<ListInfo> {
     items.add(ListInfo(ID_CUSTOM_DRAW, "Custom Draw"))
     items.add(ListInfo(ID_XFERMODE, "Xfermode View"))
     items.add(ListInfo(ID_TEXT_MEASURE, "Text Measure View"))
+    items.add(ListInfo(ID_CLIP_CAMERA, "Clip Camera View"))
     return items
 }
 

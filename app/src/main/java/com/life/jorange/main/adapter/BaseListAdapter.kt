@@ -1,12 +1,12 @@
-package com.life.jorange.adapter
+package com.life.jorange.main.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.life.jorange.base.OnItemClickListener
 import com.life.jorange.databinding.HolderMainBinding
-import com.life.jorange.entity.ListInfo
-import com.life.jorange.holder.BaseListViewHolder
+import com.life.jorange.main.entity.ListInfo
+import com.life.jorange.main.holder.BaseListViewHolder
 
 /**
  * @author: zhangly

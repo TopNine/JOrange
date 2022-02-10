@@ -1,10 +1,10 @@
 package com.life.jorange.anim
 
-import com.life.jorange.activity.BaseListActivity
 import com.life.jorange.base.ID_ANIMATOR_DETAIL
-import com.life.jorange.entity.ListInfo
+import com.life.jorange.main.activity.BaseListActivity
+import com.life.jorange.main.entity.ListInfo
+import com.life.jorange.main.viewmodel.getAnimatorList
 import com.life.jorange.utils.launchActivity
-import com.life.jorange.viewmodel.getAnimatorList
 
 /**
  * @author: zhangly

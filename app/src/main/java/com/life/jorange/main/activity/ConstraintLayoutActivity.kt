@@ -1,4 +1,4 @@
-package com.life.jorange.activity
+package com.life.jorange.main.activity
 
 import android.os.Bundle
 

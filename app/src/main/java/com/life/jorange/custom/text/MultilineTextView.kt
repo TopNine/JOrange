@@ -3,8 +3,6 @@ package com.life.jorange.custom.text
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
-import android.text.Layout
-import android.text.StaticLayout
 import android.text.TextPaint
 import android.util.AttributeSet
 import android.view.View
@@ -47,7 +45,7 @@ class MultilineTextView(context: Context, attributeSet: AttributeSet) :
 //        staticLayout.draw(canvas)
 
         canvas.drawBitmap(
-            getAvatar(IMAGE_SIZE.toInt(), resources),
+            getAvatar(IMAGE_SIZE, resources),
             width - IMAGE_SIZE,
             IMAGE_PADDING,
             paint

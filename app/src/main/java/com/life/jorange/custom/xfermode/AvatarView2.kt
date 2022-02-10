@@ -32,7 +32,7 @@ class AvatarView2(context: Context, attributeSet: AttributeSet) : View(context, 
         canvas.drawCircle(width / 2f, height / 2f, RADIO, paint)
         paint.xfermode = XFERMODE
         canvas.drawBitmap(
-            getAvatar(IMAGE_WIDTH.toInt(), resources),
+            getAvatar(IMAGE_WIDTH, resources),
             width / 2f - RADIO,
             height / 2f - RADIO,
             paint

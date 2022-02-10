@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JOrange">
         <activity
-            android:name="com.life.jorange.activity.MainActivity"
+            android:name="com.life.jorange.main.activity.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.JOrange.NoActionBar">
             <intent-filter>
@@ -21,7 +21,7 @@
         </activity>
 
         <activity
-            android:name="com.life.jorange.activity.ConstraintLayoutActivity"
+            android:name="com.life.jorange.main.activity.ConstraintLayoutActivity"
             android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
             android:theme="@style/Theme.JOrange.NoActionBar" />
         <activity
@@ -50,6 +50,10 @@
             android:theme="@style/Theme.JOrange.NoActionBar" />
         <activity
             android:name="com.life.jorange.custom.text.TextMeasureActivity"
+            android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
+            android:theme="@style/Theme.JOrange.NoActionBar" />
+        <activity
+            android:name="com.life.jorange.custom.camera.ClipCameraActivity"
             android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
             android:theme="@style/Theme.JOrange.NoActionBar" />
     </application>

@@ -12,7 +12,7 @@ import com.life.jorange.utils.getAvatar
  * Descrite:转换模式自定义view
  */
 
-private val IMG_WIDTH = 200.dp.toInt()
+private val IMG_WIDTH = 200.dp
 private val IMG_PADDING = 20.dp
 private val XFERMODE = PorterDuffXfermode(PorterDuff.Mode.SRC_IN)
 

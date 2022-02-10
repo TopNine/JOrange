@@ -3,12 +3,10 @@ package com.life.jorange.custom.text
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
-import android.text.TextPaint
 import android.util.AttributeSet
 import android.view.View
 import com.life.jorange.utils.dp
 import com.life.jorange.utils.getAvatar
-import kotlin.math.max
 
 /**
  * create time: 2022/2/6
@@ -33,7 +31,7 @@ class MultilineTextView2(context: Context, attributeSet: AttributeSet) :
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         canvas.drawBitmap(
-            getAvatar(IMAGE_WIDTH.toInt(), resources),
+            getAvatar(IMAGE_WIDTH, resources),
             width - IMAGE_WIDTH,
             IMAGE_PADDING,
             paint
@@ -48,7 +46,8 @@ class MultilineTextView2(context: Context, attributeSet: AttributeSet) :
         while (start < text.length) {
             maxWidth =
                 if (offset + fontMetrics.bottom > IMAGE_PADDING &&
-                    offset + fontMetrics.top < IMAGE_WIDTH + IMAGE_PADDING)
+                    offset + fontMetrics.top < IMAGE_WIDTH + IMAGE_PADDING
+                )
                     width - IMAGE_WIDTH else width.toFloat()
             count = paint.breakText(text, start, text.length, true, maxWidth, measureWidth)
             canvas.drawText(text, start, start + count, 0f, offset, paint)

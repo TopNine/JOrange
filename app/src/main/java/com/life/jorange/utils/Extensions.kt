@@ -42,13 +42,13 @@ inline fun <reified T : Activity> Activity.launchActivity(intent: Intent) {
     startActivity(intent)
 }
 
-fun getAvatar(width: Int, resources: Resources): Bitmap {
+fun getAvatar(width: Float, resources: Resources): Bitmap {
     val options = BitmapFactory.Options()
     options.inJustDecodeBounds = true
     BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options)
     options.inJustDecodeBounds = false
     options.inDensity = options.outWidth
-    options.inTargetDensity = width
+    options.inTargetDensity = width.toInt()
     return BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options)
 
 }
