@@ -6,7 +6,12 @@ import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.util.TypedValue
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.FragmentManager
+import androidx.viewbinding.ViewBinding
 import com.life.jorange.R
+import com.life.jorange.base.BaseDialogFragment
+import com.life.jorange.custom.animator.PropertyHolderDialog
 
 /**
  * @author: zhangly
@@ -50,5 +55,7 @@ fun getAvatar(width: Float, resources: Resources): Bitmap {
     options.inDensity = options.outWidth
     options.inTargetDensity = width.toInt()
     return BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options)
-
 }
+
+val screenWidth = Resources.getSystem().displayMetrics.widthPixels
+val screenHeight = Resources.getSystem().displayMetrics.heightPixels

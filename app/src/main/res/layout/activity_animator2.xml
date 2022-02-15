@@ -6,11 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".custom.animator.AnimatorDetailActivity">
 
-    <com.life.jorange.custom.animator.widget.CircleView
+    <com.life.jorange.custom.animator.widget.CameraView2
         android:id="@+id/anim_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/avatar_rengwuxian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

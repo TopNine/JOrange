@@ -1,9 +1,7 @@
 package com.life.jorange.main.activity
 
 import android.os.Bundle
-import com.life.jorange.alg.offer.ListNode
-import com.life.jorange.alg.offer.Solution
-import com.life.jorange.anim.ViewAnimatorActivity
+import com.life.jorange.custom.animator.ViewAnimatorActivity
 import com.life.jorange.base.ID_ANIMATOR_LAYOUT
 import com.life.jorange.base.ID_CONSTRAINT_LAYOUT
 import com.life.jorange.base.ID_CUSTOM_LIST

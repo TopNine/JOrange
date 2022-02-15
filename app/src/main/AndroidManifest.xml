@@ -25,11 +25,19 @@
             android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
             android:theme="@style/Theme.JOrange.NoActionBar" />
         <activity
-            android:name="com.life.jorange.anim.ViewAnimatorActivity"
+            android:name="com.life.jorange.custom.animator.ViewAnimatorActivity"
             android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
             android:theme="@style/Theme.JOrange.NoActionBar" />
         <activity
-            android:name="com.life.jorange.anim.AnimatorDetailActivity"
+            android:name="com.life.jorange.custom.animator.AnimatorDetailActivity2"
+            android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
+            android:theme="@style/Theme.JOrange.NoActionBar" />
+        <activity
+            android:name="com.life.jorange.custom.animator.AnimatorDetailActivity"
+            android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
+            android:theme="@style/Theme.JOrange.NoActionBar" />
+        <activity
+            android:name="com.life.jorange.custom.animator.PropertyHolderActivity"
             android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
             android:theme="@style/Theme.JOrange.NoActionBar" />
         <activity
@@ -57,5 +65,4 @@
             android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
             android:theme="@style/Theme.JOrange.NoActionBar" />
     </application>
-
 </manifest>

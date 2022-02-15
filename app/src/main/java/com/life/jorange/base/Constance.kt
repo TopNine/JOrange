@@ -10,6 +10,8 @@ const val ID_KOTLIN = 2
 
 const val ID_ANIMATOR_LAYOUT = 10
 const val ID_ANIMATOR_DETAIL = 11
+const val ID_ANIMATOR_DETAIL2 = 12
+const val ID_ANIMATOR_PROPERTY_HOLDER= 13
 
 const val ID_CUSTOM_LIST = 21
 const val ID_CUSTOM_DRAW = 22

@@ -29,5 +29,7 @@ fun getCustomList(): MutableList<ListInfo> {
 fun getAnimatorList(): MutableList<ListInfo> {
     val items = mutableListOf<ListInfo>()
     items.add(ListInfo(ID_ANIMATOR_DETAIL, "Animate Detail"))
+    items.add(ListInfo(ID_ANIMATOR_DETAIL2, "Animate Set"))
+    items.add(ListInfo(ID_ANIMATOR_PROPERTY_HOLDER, "View Property Holder"))
     return items
 }
