@@ -7,10 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.life.jorange.R
 import com.life.jorange.base.OnItemClickListener
+import com.life.jorange.base.adapter.BaseListAdapter
+import com.life.jorange.base.entity.ListInfo
 import com.life.jorange.databinding.ActivityBaseListBinding
-import com.life.jorange.main.adapter.BaseListAdapter
-import com.life.jorange.main.entity.ListInfo
-import com.life.jorange.main.viewmodel.getMainList
 
 open class BaseListActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBaseListBinding
@@ -37,7 +36,7 @@ open class BaseListActivity : AppCompatActivity() {
     }
 
     open fun getItems(): MutableList<ListInfo> {
-        return getMainList()
+        return mutableListOf()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -51,4 +50,6 @@ open class BaseListActivity : AppCompatActivity() {
             true
         } else super.onOptionsItemSelected(item)
     }
+
+
 }

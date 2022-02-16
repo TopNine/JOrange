@@ -2,6 +2,7 @@ package com.life.jorange.custom.animator
 
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
+import android.content.Context
 import com.life.jorange.base.BaseDialogFragment
 import com.life.jorange.databinding.DialogPropertyHolderBinding
 
@@ -10,8 +11,9 @@ import com.life.jorange.databinding.DialogPropertyHolderBinding
  * create time: 2022/2/4
  * Descrite:
  */
-class PropertyHolderDialog : BaseDialogFragment<DialogPropertyHolderBinding>() {
-    override fun getChildViewBinding(): DialogPropertyHolderBinding? {
+class PropertyHolderDialog(context2: Context) :
+    BaseDialogFragment<DialogPropertyHolderBinding>(context2) {
+    override fun getChildViewBinding(): DialogPropertyHolderBinding {
         return DialogPropertyHolderBinding.inflate(layoutInflater)
     }
 
@@ -24,7 +26,7 @@ class PropertyHolderDialog : BaseDialogFragment<DialogPropertyHolderBinding>() {
         val flipRotationHolder = PropertyValuesHolder.ofFloat("flipRotation", 270f)
         val topFlipHolder = PropertyValuesHolder.ofFloat("topFlip", -60f)
         val holderAnimator = ObjectAnimator.ofPropertyValuesHolder(
-            childBinding?.animView,
+            childBinding.animView,
             bottomFlipHolder,
             flipRotationHolder,
             topFlipHolder

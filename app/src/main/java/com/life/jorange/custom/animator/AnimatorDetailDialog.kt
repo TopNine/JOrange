@@ -1,8 +1,10 @@
 package com.life.jorange.custom.animator
 
 import android.animation.ObjectAnimator
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.life.jorange.base.BaseDialogFragment
 import com.life.jorange.databinding.ActivityAnimatorBinding
 import com.life.jorange.utils.dp
 
@@ -11,14 +13,9 @@ import com.life.jorange.utils.dp
  * create time: 2022/2/4
  * Descrite:
  */
-class AnimatorDetailActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityAnimatorBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityAnimatorBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        startAnim()
+class AnimatorDetailDialog(context2: Context) : BaseDialogFragment<ActivityAnimatorBinding>(context2 ) {
+    override fun getChildViewBinding(): ActivityAnimatorBinding {
+        return ActivityAnimatorBinding.inflate(layoutInflater)
     }
 
     private fun startAnim() {
@@ -32,8 +29,12 @@ class AnimatorDetailActivity : AppCompatActivity() {
 //            .startDelay = 1000
 
         //每次只能操作一个属性
-        val animator = ObjectAnimator.ofFloat(binding.animView, "radios", 150.dp)
+        val animator = ObjectAnimator.ofFloat(childBinding?.animView, "radios", 150.dp)
         animator.startDelay = 1000
         animator.start()
+    }
+
+    override fun handleView() {
+        startAnim()
     }
 }

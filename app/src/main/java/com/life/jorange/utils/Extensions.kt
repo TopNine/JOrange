@@ -6,12 +6,7 @@ import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.util.TypedValue
-import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.FragmentManager
-import androidx.viewbinding.ViewBinding
 import com.life.jorange.R
-import com.life.jorange.base.BaseDialogFragment
-import com.life.jorange.custom.animator.PropertyHolderDialog
 
 /**
  * @author: zhangly

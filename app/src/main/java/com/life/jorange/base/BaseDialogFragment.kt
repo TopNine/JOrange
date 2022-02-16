@@ -2,24 +2,22 @@ package com.life.jorange.base
 
 import android.content.Context
 import android.os.Bundle
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.FragmentActivity
 import androidx.viewbinding.ViewBinding
 import com.life.jorange.R
 import com.life.jorange.databinding.DialogBaseBinding
-import com.life.jorange.utils.screenHeight
-import com.life.jorange.utils.screenWidth
 
 /**
  * create time: 2022/2/15
  * Descrite:
  */
-open class BaseDialogFragment<V : ViewBinding> : DialogFragment() {
+abstract class BaseDialogFragment<V : ViewBinding>(var context2: Context) : DialogFragment() {
     protected lateinit var binding: DialogBaseBinding
-    protected var childBinding: V? = null
+    protected lateinit var childBinding: V
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,31 +35,36 @@ open class BaseDialogFragment<V : ViewBinding> : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.root.setOnClickListener {
+            dismissAllowingStateLoss()
+        }
+
         val childView = getChildView(view.context)
         childView?.let {
-            binding.root.addView(childView)
+            binding.containerView.addView(childView)
         }
 
         childBinding = getChildViewBinding()
-        childBinding?.let {
-            binding.root.addView(childBinding?.root)
-        }
-        binding.root.setOnClickListener {
+        binding.containerView.addView(childBinding.root)
+        binding.closeView.setOnClickListener {
             dismissAllowingStateLoss()
         }
 
         handleView()
     }
 
-    open fun handleView() {
-
-    }
+    abstract fun handleView()
 
     open fun getChildView(context: Context): View? {
         return null
     }
 
-    open fun getChildViewBinding(): V? {
-        return null
+    abstract fun getChildViewBinding(): V
+
+    fun showDialog() {
+        show(
+            (context2 as FragmentActivity).supportFragmentManager,
+            this::class.simpleName
+        )
     }
 }
