@@ -3,18 +3,13 @@ package com.life.jorange.custom.animator
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.content.Context
-import android.os.Bundle
-import android.view.LayoutInflater
-import androidx.appcompat.app.AppCompatActivity
-import com.life.jorange.base.BaseActivity
 import com.life.jorange.base.BaseDialogFragment
 import com.life.jorange.databinding.ActivityAnimator2Binding
-import com.life.jorange.utils.dp
 
 /**
  * @author: zhangly
  * create time: 2022/2/4
- * Descrite:
+ * Descrite:AnimSet 可以将多个动画组合执行
  */
 class ObjectAnimatorDialog(context2: Context) : BaseDialogFragment<ActivityAnimator2Binding>(context2) {
 

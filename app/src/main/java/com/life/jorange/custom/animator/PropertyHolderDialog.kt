@@ -9,7 +9,7 @@ import com.life.jorange.databinding.DialogPropertyHolderBinding
 /**
  * @author: zhangly
  * create time: 2022/2/4
- * Descrite:
+ * Descrite:同一个view的多个属性合成一个动画
  */
 class PropertyHolderDialog(context2: Context) :
     BaseDialogFragment<DialogPropertyHolderBinding>(context2) {
