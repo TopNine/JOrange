@@ -1,7 +1,7 @@
 package com.life.jorange.custom.graph
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
+import com.life.jorange.base.BaseDialogFragment
 import com.life.jorange.databinding.ActivityGraphMeasureBinding
 
 /**
@@ -9,11 +9,13 @@ import com.life.jorange.databinding.ActivityGraphMeasureBinding
  * create time: 2022/2/4
  * Descrite:图形的位置和尺寸测量
  */
-class GraphMeasureActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityGraphMeasureBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityGraphMeasureBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+class GraphMeasureActivity(context2: Context) :
+    BaseDialogFragment<ActivityGraphMeasureBinding>(context2) {
+    override fun getChildViewBinding(): ActivityGraphMeasureBinding {
+        return ActivityGraphMeasureBinding.inflate(layoutInflater)
+    }
+
+    override fun handleView() {
+
     }
 }

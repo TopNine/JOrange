@@ -2,7 +2,7 @@ package com.life.jorange.main.activity
 
 import android.os.Bundle
 import com.life.jorange.base.entity.ListInfo
-import com.life.jorange.custom.CustomListActivity
+import com.life.jorange.custom.CustomListDialog
 import com.life.jorange.custom.animator.AnimatorListDialog
 import com.life.jorange.custom.drawable.DrawableListDialog
 import com.life.jorange.kotlin.KotlinActivity
@@ -26,7 +26,7 @@ class MainActivity : BaseListActivity() {
     override fun handleItemClick(listInfo: ListInfo) {
         when (listInfo.id) {
             ID_CONSTRAINT_LAYOUT -> launchActivity<ConstraintLayoutActivity>()
-            ID_CUSTOM_LIST -> launchActivity<CustomListActivity>()
+            ID_CUSTOM_LIST -> CustomListDialog(this).showDialog()
             ID_KOTLIN -> launchActivity<KotlinActivity>()
             ID_ANIMATOR_LAYOUT -> AnimatorListDialog(this).showDialog()
             ID_DRAWABLE_LIST -> DrawableListDialog(this).showDialog()

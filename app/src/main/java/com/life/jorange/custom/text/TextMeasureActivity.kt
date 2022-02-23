@@ -1,18 +1,22 @@
 package com.life.jorange.custom.text
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
+import com.life.jorange.base.BaseDialogFragment
 import com.life.jorange.databinding.ActivityTextMeasureBinding
 
 /**
  * create time: 2022/2/5
  * Descrite:
  */
-class TextMeasureActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityTextMeasureBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityTextMeasureBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+class TextMeasureActivity(context2: Context) :
+    BaseDialogFragment<ActivityTextMeasureBinding>(context2) {
+    override fun handleView() {
+
     }
+
+    override fun getChildViewBinding(): ActivityTextMeasureBinding {
+        return ActivityTextMeasureBinding.inflate(layoutInflater)
+    }
+
+
 }

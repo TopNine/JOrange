@@ -1,14 +1,17 @@
 package com.life.jorange.custom.camera
 
+import android.content.Context
+import com.life.jorange.base.BaseDialogFragment
 import com.life.jorange.databinding.ActivityClipCameraBinding
-import com.life.jorange.main.activity.BaseActivity
 
-class ClipCameraActivity : BaseActivity<ActivityClipCameraBinding>() {
-    override fun getViewBinding(): ActivityClipCameraBinding {
+class ClipCameraActivity(context2: Context) :
+    BaseDialogFragment<ActivityClipCameraBinding>(context2) {
+    override fun handleView() {
+
+    }
+
+    override fun getChildViewBinding(): ActivityClipCameraBinding {
         return ActivityClipCameraBinding.inflate(layoutInflater)
     }
 
-    override fun initView() {
-        binding.root
-    }
 }

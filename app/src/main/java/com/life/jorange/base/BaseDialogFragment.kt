@@ -53,13 +53,13 @@ abstract class BaseDialogFragment<V : ViewBinding>(var context2: Context) : Dial
         handleView()
     }
 
+    abstract fun getChildViewBinding(): V
+
     abstract fun handleView()
 
     open fun getChildView(context: Context): View? {
         return null
     }
-
-    abstract fun getChildViewBinding(): V
 
     fun showDialog() {
         show(
