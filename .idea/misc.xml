@@ -13,6 +13,8 @@
         <entry key="app/src/main/res/layout/content_main.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/dialog_base.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/layout/dialog_base_list.xml" value="0.12454710144927536" />
+        <entry key="app/src/main/res/layout/dialog_bitmap.xml" value="0.16847826086956522" />
+        <entry key="app/src/main/res/layout/dialog_drawable.xml" value="0.16847826086956522" />
         <entry key="app/src/main/res/layout/dialog_key_frame.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/layout/dialog_property_holder.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/layout/dialog_type_evaluator.xml" value="0.1165489404641776" />

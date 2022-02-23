@@ -3,7 +3,6 @@ package com.life.jorange.base
 import android.content.Context
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.life.jorange.base.adapter.BaseListAdapter
 import com.life.jorange.base.entity.ListInfo
 import com.life.jorange.databinding.DialogBaseListBinding
