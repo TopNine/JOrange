@@ -16,7 +16,7 @@ import com.life.jorange.databinding.DialogBaseBinding
  * Descrite:
  */
 abstract class BaseDialogFragment<V : ViewBinding>(var context2: Context) : DialogFragment() {
-    protected lateinit var binding: DialogBaseBinding
+    private lateinit var binding: DialogBaseBinding
     protected lateinit var childBinding: V
 
     override fun onCreate(savedInstanceState: Bundle?) {

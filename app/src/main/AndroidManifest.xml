@@ -19,14 +19,5 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name="com.life.jorange.main.activity.ConstraintLayoutActivity"
-            android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
-            android:theme="@style/Theme.JOrange.NoActionBar" />
-        <activity
-            android:name="com.life.jorange.kotlin.KotlinActivity"
-            android:configChanges="keyboardHidden|screenLayout|screenSize|smallestScreenSize"
-            android:theme="@style/Theme.JOrange.NoActionBar" />
     </application>
 </manifest>

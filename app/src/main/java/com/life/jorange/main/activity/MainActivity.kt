@@ -1,12 +1,10 @@
 package com.life.jorange.main.activity
 
-import android.os.Bundle
 import com.life.jorange.base.entity.ListInfo
 import com.life.jorange.custom.CustomListDialog
 import com.life.jorange.custom.animator.AnimatorListDialog
 import com.life.jorange.custom.drawable.DrawableListDialog
-import com.life.jorange.kotlin.KotlinActivity
-import com.life.jorange.utils.launchActivity
+import com.life.jorange.kotlin.KotlinDialog
 
 private const val ID_CONSTRAINT_LAYOUT = 1
 private const val ID_KOTLIN = 2
@@ -15,19 +13,11 @@ private const val ID_CUSTOM_LIST = 21
 private const val ID_DRAWABLE_LIST = 22
 
 class MainActivity : BaseListActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-//        val solution = Solution()
-//        val head = ListNode(1, ListNode(3, ListNode(2, null)))
-//        solution.reversePrint(head)
-    }
-
     override fun handleItemClick(listInfo: ListInfo) {
         when (listInfo.id) {
-            ID_CONSTRAINT_LAYOUT -> launchActivity<ConstraintLayoutActivity>()
+            ID_CONSTRAINT_LAYOUT -> ConstraintLayoutDialog(this).showDialog()
             ID_CUSTOM_LIST -> CustomListDialog(this).showDialog()
-            ID_KOTLIN -> launchActivity<KotlinActivity>()
+            ID_KOTLIN -> KotlinDialog(this).showDialog()
             ID_ANIMATOR_LAYOUT -> AnimatorListDialog(this).showDialog()
             ID_DRAWABLE_LIST -> DrawableListDialog(this).showDialog()
         }

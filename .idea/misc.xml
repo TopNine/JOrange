@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/layout/activity_animator2.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/layout/activity_base_list.xml" value="0.1165489404641776" />
         <entry key="app/src/main/res/layout/activity_clip_camera.xml" value="0.15833333333333333" />
+        <entry key="app/src/main/res/layout/activity_kotlin.xml" value="0.1165489404641776" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16195761856710394" />
         <entry key="app/src/main/res/layout/activity_material_edit_text.xml" value="0.12952898550724637" />
         <entry key="app/src/main/res/layout/activity_property_holder.xml" value="0.12454710144927536" />
@@ -15,8 +16,10 @@
         <entry key="app/src/main/res/layout/dialog_base.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/layout/dialog_base_list.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/layout/dialog_bitmap.xml" value="0.16847826086956522" />
+        <entry key="app/src/main/res/layout/dialog_constraint_layout.xml" value="0.12952898550724637" />
         <entry key="app/src/main/res/layout/dialog_drawable.xml" value="0.16847826086956522" />
         <entry key="app/src/main/res/layout/dialog_key_frame.xml" value="0.12454710144927536" />
+        <entry key="app/src/main/res/layout/dialog_material_edit_text.xml" value="0.12952898550724637" />
         <entry key="app/src/main/res/layout/dialog_property_holder.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/layout/dialog_type_evaluator.xml" value="0.1165489404641776" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.17864583333333334" />

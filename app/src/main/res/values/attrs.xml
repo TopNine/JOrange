@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MaterialEditText">
+        <attr name="userFloatingLabel" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="MaterialEditText2">
+        <attr name="userFloatingLabel2" format="boolean" />
+    </declare-styleable>
+</resources>
