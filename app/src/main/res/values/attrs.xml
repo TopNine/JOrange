@@ -7,4 +7,7 @@
     <declare-styleable name="MaterialEditText2">
         <attr name="userFloatingLabel2" format="boolean" />
     </declare-styleable>
+    <declare-styleable name="MaterialEditText3">
+        <attr name="userFloatingLabel3" format="boolean" />
+    </declare-styleable>
 </resources>

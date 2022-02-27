@@ -33,4 +33,19 @@
             app:userFloatingLabel2="true" />
     </FrameLayout>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_70"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.life.jorange.custom.text.widget.MaterialEditText3
+            android:id="@+id/material_edit_text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            app:userFloatingLabel3="true" />
+    </FrameLayout>
+
 </androidx.appcompat.widget.LinearLayoutCompat>
