@@ -36,7 +36,7 @@ abstract class BaseDialogFragment<V : ViewBinding>(var context2: Context) : Dial
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.root.setOnClickListener {
-            dismissAllowingStateLoss()
+//            dismissAllowingStateLoss()
         }
 
         val childView = getChildView(view.context)

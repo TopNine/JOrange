@@ -5,11 +5,10 @@ import com.life.jorange.base.BaseListDialogFragment
 import com.life.jorange.base.entity.ListInfo
 import com.life.jorange.custom.camera.ClipCameraActivity
 import com.life.jorange.custom.graph.GraphMeasureActivity
+import com.life.jorange.custom.layout.LayoutListDialog
 import com.life.jorange.custom.text.MaterialEditTextDialog
 import com.life.jorange.custom.text.TextMeasureActivity
 import com.life.jorange.custom.xfermode.XfermodeActivity
-import com.life.jorange.main.activity.BaseListActivity
-import com.life.jorange.utils.launchActivity
 
 /**
  * @author: zhangly
@@ -22,6 +21,7 @@ private const val ID_XFERMODE = 23
 private const val ID_TEXT_MEASURE = 24
 private const val ID_CLIP_CAMERA = 25
 private const val ID_MATERIAL_EDIT_TEXT = 26
+private const val ID_VIEW_LAYOUT = 27
 
 class CustomListDialog(context2: Context) : BaseListDialogFragment(context2) {
     override fun getItems(): MutableList<ListInfo> {
@@ -35,6 +35,7 @@ class CustomListDialog(context2: Context) : BaseListDialogFragment(context2) {
             ID_TEXT_MEASURE -> TextMeasureActivity(context2).showDialog()
             ID_CLIP_CAMERA -> ClipCameraActivity(context2).showDialog()
             ID_MATERIAL_EDIT_TEXT -> MaterialEditTextDialog(context2).showDialog()
+            ID_VIEW_LAYOUT -> LayoutListDialog(context2).showDialog()
         }
     }
 
@@ -45,6 +46,7 @@ class CustomListDialog(context2: Context) : BaseListDialogFragment(context2) {
         items.add(ListInfo(ID_TEXT_MEASURE, "Text Measure View"))
         items.add(ListInfo(ID_CLIP_CAMERA, "Clip Camera View"))
         items.add(ListInfo(ID_MATERIAL_EDIT_TEXT, "Material edit text"))
+        items.add(ListInfo(ID_VIEW_LAYOUT, "View Layout List"))
         return items
     }
 }
