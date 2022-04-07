@@ -8,6 +8,7 @@ import com.life.jorange.event.gesture.EventGestureDialog
 import com.life.jorange.event.multi.EventMultiDialog
 import com.life.jorange.event.multi.EventMultiDialog2
 import com.life.jorange.event.multi.EventMultiDialog3
+import com.life.jorange.event.touch.GroupTouchDialog
 
 /**
  * @author: zhangly
@@ -20,6 +21,7 @@ private const val ID_EVENT_GESTURE = 12
 private const val ID_EVENT_MULTI = 13
 private const val ID_EVENT_MULTI_2 = 14
 private const val ID_EVENT_MULTI_3 = 15
+private const val ID_EVENT_GROUP_TOUCH = 16
 
 class EventListDialog(context2: Context) : BaseListDialogFragment(context2) {
 
@@ -34,6 +36,7 @@ class EventListDialog(context2: Context) : BaseListDialogFragment(context2) {
             ID_EVENT_MULTI -> EventMultiDialog(context2).showDialog()
             ID_EVENT_MULTI_2 -> EventMultiDialog2(context2).showDialog()
             ID_EVENT_MULTI_3 -> EventMultiDialog3(context2).showDialog()
+            ID_EVENT_GROUP_TOUCH -> GroupTouchDialog(context2).showDialog()
         }
     }
 
@@ -44,6 +47,7 @@ class EventListDialog(context2: Context) : BaseListDialogFragment(context2) {
         items.add(ListInfo(ID_EVENT_MULTI, "Event Multi 接力型"))
         items.add(ListInfo(ID_EVENT_MULTI_2, "Event Multi 配合型"))
         items.add(ListInfo(ID_EVENT_MULTI_3, "Event Multi 各自为战型"))
+        items.add(ListInfo(ID_EVENT_GROUP_TOUCH, "View Group Touch"))
         return items
     }
 }
