@@ -78,5 +78,14 @@ class ScalableImageView(context: Context, attrs: AttributeSet?) : View(context, 
             }
             return true
         }
+
+        override fun onScroll(
+            downEvent: MotionEvent,
+            currentEvent: MotionEvent,
+            distanceX: Float,
+            distanceY: Float
+        ): Boolean {
+            return super.onScroll(downEvent, currentEvent, distanceX, distanceY)
+        }
     }
 }

@@ -28,8 +28,8 @@ class CustomListDialog(context2: Context) : BaseListDialogFragment(context2) {
         return getCustomList()
     }
 
-    override fun handleItemClick(listInfo: ListInfo) {
-        when (listInfo.id) {
+    override fun handleItemClick(item: ListInfo) {
+        when (item.id) {
             ID_CUSTOM_DRAW -> GraphMeasureActivity(context2).showDialog()
             ID_XFERMODE -> XfermodeActivity(context2).showDialog()
             ID_TEXT_MEASURE -> TextMeasureActivity(context2).showDialog()

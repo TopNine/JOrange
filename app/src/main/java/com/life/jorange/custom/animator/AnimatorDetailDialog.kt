@@ -29,7 +29,7 @@ class AnimatorDetailDialog(context2: Context) : BaseDialogFragment<ActivityAnima
 //            .startDelay = 1000
 
         //每次只能操作一个属性
-        val animator = ObjectAnimator.ofFloat(childBinding?.animView, "radios", 150.dp)
+        val animator = ObjectAnimator.ofFloat(childBinding.animView, "radios", 150.dp)
         animator.startDelay = 1000
         animator.start()
     }

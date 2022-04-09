@@ -2,9 +2,6 @@
 buildscript {
     ext.kotlin_version = '1.6.20'
     repositories {
-        maven { url 'https://maven.aliyun.com/repository/google/' }
-        maven { url 'https://maven.aliyun.com/repository/public/' }
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
         mavenCentral()
         maven {
             url 'https://maven.google.com/'
@@ -14,7 +11,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.1'
+        classpath 'com.android.tools.build:gradle:7.0.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.bytedance.tools.lancet:lancet-plugin-asm6:1.0.0'
 

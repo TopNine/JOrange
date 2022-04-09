@@ -28,7 +28,7 @@ class MultiTouchViewEx3(context: Context, attrs: AttributeSet?) : View(context, 
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        paths.forEach { id, path ->
+        paths.forEach { _, path ->
             canvas.drawPath(path, paint)
         }
     }
