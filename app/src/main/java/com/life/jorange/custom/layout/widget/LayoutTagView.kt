@@ -1,11 +1,15 @@
 package com.life.jorange.custom.layout.widget
 
 import android.content.Context
+import android.graphics.Rect
 import android.util.AttributeSet
 import android.view.ViewGroup
-import android.widget.FrameLayout
+import androidx.core.view.children
+import kotlin.math.max
 
-
+/**
+ * https://mp.weixin.qq.com/s/az1BpcgSRS8U0nAQp0Hqeg
+ */
 private val provinces = listOf(
     "北京市",
     "天津市",
@@ -45,47 +49,80 @@ private val provinces = listOf(
 
 class LayoutTagView(context: Context, private val attrs: AttributeSet?) :
     ViewGroup(context, attrs) {
+    private val childrenBounds = mutableListOf<Rect>()
 
     init {
         val roundTextView = RoundTextView(context)
         roundTextView.text = provinces[0]
-        addView(
-            roundTextView,
-            MarginLayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
-        )
+        addTagView()
     }
 
     fun addTagView() {
-//        val roundTextView = RoundTextView(context2)
-//        roundTextView.text = provinces[0]
-//        addView(roundTextView, MarginLayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT))
+        provinces.forEach() { province ->
+            val roundTextView = RoundTextView(context).apply {
+                text = province
+                layoutParams = MarginLayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
+            }
+            addView(roundTextView)
+        }
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        val childView = getChildAt(0)
-        measureChildWithMargins(childView, widthMeasureSpec, 0, heightMeasureSpec, 0)
-        setMeasuredDimension(childView.measuredWidth, childView.measuredHeight)
-//        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+        var widthUsed = 0
+        var heightUsed = 0
+        var lineWidthUsed = 0
+        var lineHeightUsed = 0
+        val specWidthSize = MeasureSpec.getSize(widthMeasureSpec)
+        val specWidthMode = MeasureSpec.getMode(widthMeasureSpec)
+        for ((index, child) in children.withIndex()) {
+            measureChildWithMargins(child, widthMeasureSpec, 0, heightMeasureSpec, heightUsed)
+            if (specWidthMode != MeasureSpec.UNSPECIFIED && (lineWidthUsed + child.measuredWidth > specWidthSize)) {
+                lineWidthUsed = 0
+                heightUsed += lineHeightUsed
+                lineHeightUsed = 0
+                measureChildWithMargins(child, widthMeasureSpec, 0, heightMeasureSpec, heightUsed)
+            }
+            if (index >= childrenBounds.size) {
+                childrenBounds.add(Rect())
+            }
+            val childBounds = childrenBounds[index]
+            childBounds.set(
+                lineWidthUsed,
+                heightUsed,
+                lineWidthUsed + child.measuredWidth,
+                heightUsed + child.measuredHeight
+            )
+            lineWidthUsed += child.measuredWidth
+            widthUsed = max(widthUsed, lineWidthUsed)
+            lineHeightUsed = max(child.measuredHeight, lineHeightUsed)
+        }
+        val selfWidth = widthUsed
+        val selfHeight = heightUsed + lineHeightUsed
+        setMeasuredDimension(selfWidth, selfHeight)
     }
 
     override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
-        val childView = getChildAt(0)
-        childView.layout(
-            paddingLeft,
-            paddingTop,
-            paddingLeft + childView.measuredWidth,
-            paddingTop + childView.measuredHeight
-        )
+        for ((index, child) in children.withIndex()) {
+            val childBounds = childrenBounds[index]
+            child.layout(
+                childBounds.left,
+                childBounds.top,
+                childBounds.right,
+                childBounds.bottom
+            )
+        }
     }
 
+    /**
+     * 修复 LayoutParams 转换异常
+     */
     override fun generateLayoutParams(attrs: AttributeSet?): LayoutParams {
         return MarginLayoutParams(context, attrs)
     }
 
-    override fun generateDefaultLayoutParams(): LayoutParams {
-        return MarginLayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
-    }
-
+    /**
+     * 修复子 view 的 LayoutParams 转换异常
+     */
     override fun checkLayoutParams(p: LayoutParams?): Boolean {
         return p is MarginLayoutParams
     }
