@@ -19,5 +19,6 @@ class GroupTouchDialog(context2: Context) :
 
 
     override fun handleView() {
+
     }
 }
