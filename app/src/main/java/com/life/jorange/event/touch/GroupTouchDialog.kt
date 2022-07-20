@@ -11,7 +11,6 @@ import com.life.jorange.databinding.DialogEventGroupTouchBinding
  */
 private const val TAG = "GroupTouchDialog"
 
-
 class GroupTouchDialog(context2: Context) :
     BaseDialogFragment<DialogEventGroupTouchBinding>(context2) {
     override fun getChildViewBinding(): DialogEventGroupTouchBinding {
