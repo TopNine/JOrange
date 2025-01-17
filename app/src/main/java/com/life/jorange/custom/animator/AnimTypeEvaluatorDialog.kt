@@ -27,14 +27,14 @@ class AnimTypeEvaluatorDialog(context2: Context) :
     }
 
     private fun startAnim() {
-        val animator =
-            ObjectAnimator.ofObject(
-                childBinding.pointView, "pointF", PointFView.PointFEvaluator(),
-                PointF(100.dp, 200.dp)
-            )
-        animator.startDelay = 1000
-        animator.duration = 2000
-        animator.start()
+//        val animator =
+//            ObjectAnimator.ofObject(
+//                childBinding.pointView, "pointF", PointFView.PointFEvaluator(),
+//                PointF(100.dp, 200.dp)
+//            )
+//        animator.startDelay = 1000
+//        animator.duration = 2000
+//        animator.start()
 
         val animator2 =
             ObjectAnimator.ofObject(

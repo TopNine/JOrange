@@ -43,13 +43,17 @@ inline fun <reified T : Activity> Activity.launchActivity(intent: Intent) {
 }
 
 fun getAvatar(width: Float, resources: Resources): Bitmap {
+    return getAvatar(R.drawable.avatar_rengwuxian, width, resources)
+}
+
+fun getAvatar(drawableId: Int, width: Float, resources: Resources): Bitmap {
     val options = BitmapFactory.Options()
     options.inJustDecodeBounds = true
-    BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options)
+    BitmapFactory.decodeResource(resources, drawableId, options)
     options.inJustDecodeBounds = false
     options.inDensity = options.outWidth
     options.inTargetDensity = width.toInt()
-    return BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options)
+    return BitmapFactory.decodeResource(resources, drawableId, options)
 }
 
 val screenWidth = Resources.getSystem().displayMetrics.widthPixels

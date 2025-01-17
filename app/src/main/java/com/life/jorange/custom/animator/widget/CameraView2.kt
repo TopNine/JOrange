@@ -7,6 +7,7 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
 import androidx.core.graphics.withSave
+import com.life.jorange.R
 import com.life.jorange.utils.dp
 import com.life.jorange.utils.getAvatar
 
@@ -35,7 +36,7 @@ class CameraView2(context: Context, attributeSet: AttributeSet) : View(context, 
         }
 
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    private val bitmap = getAvatar(BITMAP_SIZE, resources)
+    private val bitmap = getAvatar(R.drawable.common_img_2, BITMAP_SIZE, resources)
     private val camera = Camera()
 
     init {

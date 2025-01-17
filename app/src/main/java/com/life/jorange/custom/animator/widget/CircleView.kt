@@ -25,7 +25,7 @@ class CircleView(context: Context, attributeSet: AttributeSet) : View(context, a
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        paint.color = Color.GREEN
+        paint.color = Color.RED
         canvas.drawCircle(width / 2f, height / 2f, radios, paint)
     }
 }

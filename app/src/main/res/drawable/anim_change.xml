@@ -1,0 +1,19 @@
+<!-- res/drawable/myanimstatedrawable.xml -->
+<animated-selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/pressed" android:drawable="@drawable/video_paused"
+        android:state_pressed="true"/>
+    <item android:id="@+id/focused" android:drawable="@drawable/video_play"
+        android:state_focused="true"/>
+    <item android:id="@+id/aaa"
+        android:drawable="@drawable/video_play"/>
+
+    <!-- specify a transition -->
+    <transition android:fromId="@id/aaa" android:toId="@+id/pressed">
+        <animation-list>
+            <item android:duration="15" android:drawable="@drawable/video_paused"/>
+            <item android:duration="15" android:drawable="@drawable/video_paused"/>
+        </animation-list>
+    </transition>
+</animated-selector>

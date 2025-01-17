@@ -32,8 +32,7 @@ class KeyFrameDialog(context2: Context) :
         val propertyValuesHolder = PropertyValuesHolder.ofKeyframe(
             "translationX", keyframe1, keyframe2, keyframe3, keyframe4
         )
-        val animator =
-            ObjectAnimator.ofPropertyValuesHolder(childBinding.keyframeView, propertyValuesHolder)
+        val animator = ObjectAnimator.ofPropertyValuesHolder(childBinding.keyframeView, propertyValuesHolder)
         animator.startDelay = 1000
         animator.duration = 2000
         animator.start()

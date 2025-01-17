@@ -51,6 +51,9 @@ class PieView(context: Context, attributeSet: AttributeSet) : View(context, attr
         }
     }
 
+    /**
+     * 角度转弧度
+     */
     private fun markArc(startAngle: Float, sweepAngle: Float): Float {
         return Math.toRadians((sweepAngle / 2 + startAngle).toDouble())
             .toFloat()

@@ -54,7 +54,7 @@ private val provinces = listOf(
 class ProvinceView(context: Context, attributeSet: AttributeSet) : View(context, attributeSet) {
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
         .apply {
-            textSize = 100.dp
+            textSize = 50.dp
             textAlign = Paint.Align.CENTER
         }
 
